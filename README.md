@@ -1,5 +1,4 @@
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/9e34f148-cdb5-4d3a-830b-d14fdeeb2aed" />
-
+<img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/9e34f148-cdb5-4d3a-830b-d14fdeeb2aed" />
 
 # YourGame
 
