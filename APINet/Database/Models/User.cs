@@ -13,7 +13,7 @@ public class User
 
     public string Email { get; set; } = null!;
 
-    public int Money {get; set;}
+    public int? Money {get; set;}
 
     public virtual ICollection<Car>? Cars { get; set; } = new List<Car>();
 }
