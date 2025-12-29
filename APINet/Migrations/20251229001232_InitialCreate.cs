@@ -18,7 +18,8 @@ namespace APINet.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     FirstName = table.Column<string>(type: "TEXT", nullable: false),
                     LastName = table.Column<string>(type: "TEXT", nullable: false),
-                    Email = table.Column<string>(type: "TEXT", nullable: false)
+                    Email = table.Column<string>(type: "TEXT", nullable: false),
+                    Money = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {

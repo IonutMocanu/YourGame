@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace APINet.Migrations
 {
     [DbContext(typeof(GameDatabaseContext))]
-    [Migration("20251228234528_InitialCreate")]
+    [Migration("20251229001232_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -70,6 +70,9 @@ namespace APINet.Migrations
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("Money")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 

@@ -21,7 +21,7 @@ public class UserService(GameDatabaseContext context) : IUserService
         var totalCount = await query.CountAsync();
 
         var data = await query
-            .Include(u => u.Cars) // <--- IMPORTANT: Include mașinile pentru a le număra sau afișa
+            .Include(u => u.Cars) 
             .OrderBy(u => u.Id)
             .Skip((queryParams.Page - 1) * queryParams.PageSize)
             .Take(queryParams.PageSize)
@@ -31,7 +31,7 @@ public class UserService(GameDatabaseContext context) : IUserService
                 FirstName = u.FirstName,
                 LastName = u.LastName,
                 Email = u.Email,
-                // Aici populăm garajul userului în lista de useri
+                Money = u.Money,
                 Garage = u.Cars.Select(c => new CarRecord 
                 {
                     Id = c.Id,
