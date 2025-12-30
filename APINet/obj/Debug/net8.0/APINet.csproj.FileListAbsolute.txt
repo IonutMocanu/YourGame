@@ -159,3 +159,9 @@ D:\YourGame\APINet\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Cachi
 D:\YourGame\APINet\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\YourGame\APINet\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\YourGame\APINet\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Sqlite.dll
+D:\YourGame\APINet\bin\Debug\net8.0\APINet.Shared.dll
+D:\YourGame\APINet\bin\Debug\net8.0\APINet.Shared.pdb
+D:\YourGame\APINet\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\YourGame\APINet\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\YourGame\APINet\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\YourGame\APINet\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll

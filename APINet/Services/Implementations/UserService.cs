@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using APINet.Database;
-using APINet.Database.Models;
-using APINet.DataTransferObjects;
+using APINet.Shared.Database.Models;
+using APINet.Shared.DataTransferObjects;
 using APINet.Services.Abstractions;
 
 namespace APINet.Services.Implementations;
@@ -19,20 +19,18 @@ public async Task<PagedResponse<UserRecord>> GetUsers(SearchPaginationQueryParam
         query = query.Where(u => u.Email.ToLower().Contains(search) || u.LastName.ToLower().Contains(search));
     }
 
-    // 2. Numărare totală
+
     var totalCount = await query.CountAsync();
 
-    // 3. Extragere ENTITĂȚI (Raw Data)
-    // Aici NU facem new UserRecord, ci aducem obiectele User din bază
+
     var userEntities = await query
-        .Include(u => u.Cars) // <--- IMPORTANT: Aducem și mașinile
+        .Include(u => u.Cars) 
         .OrderBy(u => u.Id)
         .Skip((queryParams.Page - 1) * queryParams.PageSize)
         .Take(queryParams.PageSize)
-        .ToListAsync(); // <--- Aici se execută SQL-ul simplu și datele ajung în RAM
+        .ToListAsync(); 
 
-    // 4. Mapare în Memorie (Mapping)
-    // Acum că avem datele în RAM, C# poate face transformarea complexă fără erori
+
     var data = userEntities.Select(u => new UserRecord
     {
         Id = u.Id,
@@ -62,21 +60,18 @@ public async Task<PagedResponse<UserRecord>> GetUsers(SearchPaginationQueryParam
     };
 }
 
-    public async Task<UserRecord?> GetUser(int userId)
+    public async Task<UserRecord?> GetUser(string email)
 {
-    // PASUL 1: Aducem datele brute din baza de date (fără Select complex)
     var userEntity = await context.Users
-        .Include(u => u.Cars) // <--- Aducem mașinile folosind Include
-        .FirstOrDefaultAsync(u => u.Id == userId);
+        .Include(u => u.Cars) 
+        .FirstOrDefaultAsync(u => u.Email == email);
 
-    // Verificăm dacă userul există
     if (userEntity == null) 
     {
         return null;
     }
 
-    // PASUL 2: Facem maparea (transformarea) în memorie (C#)
-    // Aici nu mai contează că e SQLite, pentru că datele sunt deja la noi.
+
     var userDto = new UserRecord
     {
         Id = userEntity.Id,
@@ -107,7 +102,8 @@ public async Task<PagedResponse<UserRecord>> GetUsers(SearchPaginationQueryParam
         {
             FirstName = userDto.FirstName,
             LastName = userDto.LastName,
-            Email = userDto.Email
+            Email = userDto.Email,
+            Money = 100
         };
 
         await context.Users.AddAsync(entity);
@@ -136,5 +132,14 @@ public async Task<PagedResponse<UserRecord>> GetUsers(SearchPaginationQueryParam
             context.Users.Remove(entity);
             await context.SaveChangesAsync();
         }
+    }
+
+    public async Task AddMoney(UserMoneyUpdateRecord userDto)
+    {
+        var entity = await context.Users.FirstOrDefaultAsync(u => u.Id == userDto.Id);
+        if (entity == null) throw new Exception("Userul nu a fost găsit");
+        entity.Money = userDto.Money;
+        context.Users.Update(entity);
+        await context.SaveChangesAsync();
     }
 }

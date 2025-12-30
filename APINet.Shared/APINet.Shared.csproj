@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>10.0</LangVersion> 
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    
+    <PostBuildEvent>xcopy "D:\YourGame\APINet.Shared\bin\Debug\netstandard2.1\APINet.Shared.dll" "D:\YourGame\ProiectIS2\Assets\DLLs" /Y /I</PostBuildEvent>
+  </PropertyGroup>
+
+</Project>

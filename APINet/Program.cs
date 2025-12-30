@@ -2,8 +2,9 @@ using System;
 using System.Collections.Generic;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Serialization;
 using APINet.Database;
-using APINet.Database.Models;
+using APINet.Shared.Database.Models;
 using APINet.Services.Abstractions;
 using APINet.Services.Implementations;
 
@@ -11,7 +12,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddNewtonsoftJson(o => {
+    o.SerializerSettings.ContractResolver = new DefaultContractResolver();
+});
 
 builder.Services.AddDbContext<GameDatabaseContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));

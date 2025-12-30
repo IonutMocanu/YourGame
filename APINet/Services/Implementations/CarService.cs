@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using APINet.Database;
-using APINet.Database.Models;
-using APINet.DataTransferObjects;
+using APINet.Shared.Database.Models;
+using APINet.Shared.DataTransferObjects;
 using APINet.Services.Abstractions;
 
 namespace APINet.Services.Implementations;

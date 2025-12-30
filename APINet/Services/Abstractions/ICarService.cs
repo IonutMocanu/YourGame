@@ -1,4 +1,4 @@
-using APINet.DataTransferObjects;
+using APINet.Shared.DataTransferObjects;
 
 namespace APINet.Services.Abstractions;
 

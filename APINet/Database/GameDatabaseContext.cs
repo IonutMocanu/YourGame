@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using APINet.Database.Models;
+using APINet.Shared.Database.Models;
 
 namespace APINet.Database;
 
@@ -26,7 +26,7 @@ public partial class GameDatabaseContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-       // Configurare User
+
         modelBuilder.Entity<User>(entity =>
         {
             entity.ToTable("User");
@@ -34,18 +34,16 @@ public partial class GameDatabaseContext : DbContext
             entity.HasIndex(e => e.Email).IsUnique();
         });
 
-        // Configurare Car
+
         modelBuilder.Entity<Car>(entity =>
         {
             entity.ToTable("Car");
             entity.HasKey(e => e.Id);
 
-            // RELAȚIA IMPORTANTA:
-            // O mașină are un User -> Un User are multe mașini
             entity.HasOne(d => d.User)
                   .WithMany(p => p.Cars)
                   .HasForeignKey(d => d.UserId)
-                  .OnDelete(DeleteBehavior.Cascade); // Dacă ștergi Userul, dispar și mașinile
+                  .OnDelete(DeleteBehavior.Cascade); //daca stergi user-ul iti sterge si garajul lui
         });
 
         OnModelCreatingPartial(modelBuilder);

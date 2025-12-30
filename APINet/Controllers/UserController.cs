@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using APINet.Services.Abstractions;
-using APINet.DataTransferObjects;
+using APINet.Shared.DataTransferObjects;
 
 namespace APINet.Controllers;
 
@@ -23,11 +23,11 @@ public class UserController : ControllerBase
         return Ok(response);
     }
 
-    // GET: api/User/5
-    [HttpGet("{id}")]
-    public async Task<ActionResult<UserRecord>> GetUser(int id)
+    // GET: api/User/ionut@mocanu
+    [HttpGet("{email}")]
+    public async Task<ActionResult<UserRecord>> GetUser(string email)
     {
-        var user = await _userService.GetUser(id);
+        var user = await _userService.GetUser(email);
         if (user == null) return NotFound("Jucătorul nu există.");
 
         return Ok(user);
@@ -38,7 +38,7 @@ public class UserController : ControllerBase
     public async Task<IActionResult> AddUser([FromBody] UserAddRecord user)
     {
         await _userService.AddUser(user);
-        return Ok("Jucător creat cu succes.");
+        return Ok(user);
     }
 
     // PUT: api/User
@@ -48,6 +48,20 @@ public class UserController : ControllerBase
         try
         {
             await _userService.UpdateUser(user);
+            return Ok("Jucător actualizat.");
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
+
+    [HttpPut("add-money")]
+    public async Task<IActionResult> AddMoney([FromBody] UserMoneyUpdateRecord user)
+    {
+        try
+        {
+            await _userService.AddMoney(user);
             return Ok("Jucător actualizat.");
         }
         catch (Exception ex)

@@ -1,0 +1,10 @@
+D:\YourGame\APINet.Shared\obj\Debug\netstandard2.1\APINet.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\YourGame\APINet.Shared\obj\Debug\netstandard2.1\APINet.Shared.AssemblyInfoInputs.cache
+D:\YourGame\APINet.Shared\obj\Debug\netstandard2.1\APINet.Shared.AssemblyInfo.cs
+D:\YourGame\APINet.Shared\obj\Debug\netstandard2.1\APINet.Shared.csproj.CoreCompileInputs.cache
+D:\YourGame\APINet.Shared\obj\Debug\netstandard2.1\APINet.Shared.sourcelink.json
+D:\YourGame\APINet.Shared\bin\Debug\netstandard2.1\APINet.Shared.deps.json
+D:\YourGame\APINet.Shared\bin\Debug\netstandard2.1\APINet.Shared.dll
+D:\YourGame\APINet.Shared\bin\Debug\netstandard2.1\APINet.Shared.pdb
+D:\YourGame\APINet.Shared\obj\Debug\netstandard2.1\APINet.Shared.dll
+D:\YourGame\APINet.Shared\obj\Debug\netstandard2.1\APINet.Shared.pdb

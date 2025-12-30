@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using APINet.Services.Abstractions;
-using APINet.DataTransferObjects;
+using APINet.Shared.DataTransferObjects;
 
 namespace APINet.Controllers;
 
@@ -10,13 +10,11 @@ public class CarController : ControllerBase
 {
     private readonly ICarService _carService;
 
-    // "Injectăm" serviciul prin constructor
     public CarController(ICarService carService)
     {
         _carService = carService;
     }
 
-    // GET: api/Car?Page=1&PageSize=10&Search=BMW
     [HttpGet]
     public async Task<ActionResult<PagedResponse<CarRecord>>> GetCars([FromQuery] SearchPaginationQueryParams query)
     {
@@ -24,7 +22,6 @@ public class CarController : ControllerBase
         return Ok(response);
     }
 
-    // GET: api/Car/5
     [HttpGet("{id}")]
     public async Task<ActionResult<CarRecord>> GetCar(int id)
     {
@@ -34,7 +31,6 @@ public class CarController : ControllerBase
         return Ok(car);
     }
 
-    // POST: api/Car/buy/5 (Cumpără mașină pentru userul 5)
     [HttpPost("buy/{userId}")]
     public async Task<IActionResult> BuyCar(int userId, [FromBody] CarAddRecord car)
     {
@@ -49,7 +45,6 @@ public class CarController : ControllerBase
         }
     }
 
-    // PUT: api/Car (Update tuning/vopsea)
     [HttpPut]
     public async Task<IActionResult> UpdateCar([FromBody] CarUpdateRecord car)
     {
@@ -64,7 +59,6 @@ public class CarController : ControllerBase
         }
     }
 
-    // DELETE: api/Car/5
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteCar(int id)
     {
