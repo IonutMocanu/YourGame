@@ -94,7 +94,6 @@ public class CarService(GameDatabaseContext context) : ICarService
         var entity = await context.Cars.FirstOrDefaultAsync(c => c.Id == carDto.Id);
         if (entity == null) throw new Exception("Mașina nu există!");
 
-        // Actualizăm doar ce nu e null
         if (carDto.Manufacturer != null) entity.Manufacturer = carDto.Manufacturer;
         if (carDto.Model != null) entity.Model = carDto.Model;
         if (carDto.Speed != null) entity.Speed = carDto.Speed.Value;
