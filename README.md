@@ -45,7 +45,7 @@ Logica jocului (Client) este separată de logica de business și persistența da
 ### Galerie
 | Login Menu | Garage System | Swagger API |
 |:---:|:---:|:---:|
-| <img src="Readmephoto/MENU.jpeg" alt="isolated" width="200"/> | ![Garage](Screenshots/garage.png) | ![Swagger](Screenshots/swagger.png) |
+| <img src=""D:\YourGame\Readmephoto\MENU.jpeg"" alt="isolated" width="200"/> | ![Garage](Screenshots/garage.png) | ![Swagger](Screenshots/swagger.png) |
 
 *(Notă: Asigură-te că urci pozele în folderul proiectului și actualizezi calea de mai sus)*
 
@@ -70,14 +70,14 @@ docker-compose up --build
 ```
 Serverul va fi accesibil la: [http://localhost:7106/swagger/index.html](http://localhost:7106/swagger/index.html)
 
-## 2.1 Pornirea Jocului (cu Unity)
+## 2.a Pornirea Jocului (cu Unity)
 1. Deschide **Unity Hub**.
 2. Apasă **Add Project** și selectează folderul `ProiectIS2`.
 3. Deschide scena principală (ex: `LoginScene`).
 4. Asigură-te că serverul (Docker) rulează.
 5. Apasă **Play** ▶️.
 
-## 2.2 Pornirea Jocului (fără Unity)
+## 2.b Pornirea Jocului (fără Unity) - recomandată
 1. Mergi în folderul rădăcinp.
 2. Apoi ProiectIS2->BuildProfiles->ProiectIS2.
 
