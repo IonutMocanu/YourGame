@@ -1,36 +1,36 @@
 # Your Game
 
-> Un simulator 3D interactiv dezvoltat în **Unity**, conectat la un backend robust **ASP.NET Core**, care permite utilizatorilor să gestioneze un cont virtual, să achiziționeze mașini și să le vizualizeze într-un garaj personalizat.
+> An interactive 3D simulator developed in **Unity**, connected to a robust **ASP.NET Core** backend, allowing users to manage a virtual account, purchase cars, and view them in a personalized garage.
 
 ![Unity](https://img.shields.io/badge/Client-Unity_2025-black?logo=unity)
 ![.NET](https://img.shields.io/badge/Backend-.NET_8-purple?logo=dotnet)
 ![Docker](https://img.shields.io/badge/Deploy-Docker-blue?logo=docker)
 ![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?logo=sqlite)
 
-## Descriere
+## Description
 
-Acest proiect reprezintă o aplicație **Full-Stack** aplicată în contextul dezvoltării de jocuri video. Spre deosebire de jocurile standard care salvează datele local, acest simulator implementează o arhitectură **Client-Server** reală.
+This project represents a **Full-Stack** application applied in the context of video game development. Unlike standard games that save data locally, this simulator implements a real **Client-Server** architecture.
 
-Logica jocului (Client) este separată de logica de business și persistența datelor (Server), comunicarea realizându-se prin cereri HTTP către un **REST API** securizat. Utilizatorii se pot înregistra, pot acumula bani virtuali și pot cumpăra vehicule care rămân salvate permanent în baza de date.
+The game logic (Client) is separated from the business logic and data persistence (Server), with communication handled via HTTP requests to a secure **REST API**. Users can register, accumulate virtual currency, and purchase vehicles that remain permanently saved in the database.
 
-## Funcționalități Principale
+## Key Features
 
 ### Client (Unity)
-* **Sistem de Autentificare:** Login și Register complet funcționale (validare Nume, Prenume, Email).
-* **Showroom & Garaj 3D:** Vizualizare interactivă a mașinilor (stil Low Poly).
-* **Interfață UI Reactivă:** Meniuri pentru vizualizare specificații (Viteză, Preț, An Fabricație).
-* **Sistem Economic:** Gestionarea bugetului utilizatorului și achiziția de bunuri.
-* **HTTP Networking:** Implementare custom a unui `HttpClient` pentru comunicarea asincronă cu serverul.
+* **Authentication System:** Fully functional Login and Register (First Name, Last Name, Email validation).
+* **3D Showroom & Garage:** Interactive car visualization (Low Poly style).
+* **Reactive UI Interface:** Menus for viewing specifications (Speed, Price, Manufacturing Year).
+* **Economic System:** User budget management and asset acquisition.
+* **HTTP Networking:** Custom implementation of an `HttpClient` for asynchronous communication with the server.
 
 ### Backend (ASP.NET Core API)
-* **RESTful Architecture:** Endpoints structurate pentru Useri și Mașini (CRUD).
-* **Persistență Date:** Bază de date **SQLite** gestionată prin **Entity Framework Core**.
-* **Dockerized:** Backend-ul rulează izolat într-un container Docker pentru o instalare rapidă.
-* **Swagger UI:** Documentație automată a API-ului pentru testare rapidă.
+* **RESTful Architecture:** Structured endpoints for Users and Cars (CRUD).
+* **Data Persistence:** **SQLite** database managed via **Entity Framework Core**.
+* **Dockerized:** The backend runs isolated in a Docker container for quick installation.
+* **Swagger UI:** Automatic API documentation for rapid testing.
 
-## Tehnologii Utilizate
+## Technologies Used
 
-| Categorie | Tehnologii |
+| Category | Technologies |
 | :--- | :--- |
 | **Frontend** | Unity Engine (C#), TextMeshPro (UI), Newtonsoft.Json |
 | **Backend** | ASP.NET Core Web API (.NET 8), Entity Framework Core |
@@ -39,72 +39,72 @@ Logica jocului (Client) este separată de logica de business și persistența da
 
 ## Demo & Screenshots
 
-### Prezentare Video
+### Video Presentation
 
 https://github.com/user-attachments/assets/aa0bc856-095d-4ab3-99c4-52ba8d8851cd
 
 https://github.com/user-attachments/assets/26e41d23-42d5-4c94-8c46-68dbef493d33
 
-### Galerie
-
+### Gallery
 
 | Login Menu | Garage System | Swagger API |
 |:---:|:---:|:---:|
-| <img src="https://github.com/IonutMocanu/YourGame/blob/main/Readmephoto/MENU.jpeg" alt="isolated" width="1600"/> | <img src="https://github.com/IonutMocanu/YourGame/blob/main/Readmephoto/GARAGE.jpeg" alt="isolated" width="1600"/> |<img src="https://github.com/IonutMocanu/YourGame/blob/main/Readmephoto/API.jpeg" alt="isolated" width="1600"/> |
+| <img src="https://github.com/IonutMocanu/YourGame/blob/main/Readmephoto/MENU.jpeg" alt="Login Menu" width="1600"/> | <img src="https://github.com/IonutMocanu/YourGame/blob/main/Readmephoto/GARAGE.jpeg" alt="Garage System" width="1600"/> |<img src="https://github.com/IonutMocanu/YourGame/blob/main/Readmephoto/API.jpeg" alt="Swagger API" width="1600"/> |
 
+## Installation and Running
 
-## Instalare și Rulare
+The project is designed to run modularly. Follow the steps below:
 
-Proiectul este gândit să ruleze modular. Urmează pașii de mai jos:
+## 1. Starting the Server (Backend)
+We configured **Docker Compose** to eliminate the need for manually installing databases or complex SDKs.
 
-## 1. Pornirea Serverului (Backend)
-Am configurat **Docker Compose** pentru a elimina nevoia de a instala baze de date sau SDK-uri complexe manual.
-
-### 1.1 Clonează repository-ul
+### 1.1 Clone the repository
 ```bash
-git clone https://github.com/IonutMocanu/YourGame.git
+git clone [https://github.com/IonutMocanu/YourGame.git](https://github.com/IonutMocanu/YourGame.git)
 ```
-### 1.2 Navighează în folderul rădăcină (unde este docker-compose.yml)
+### 1.2 Navigate to the root folder (where docker-compose.yml is located)
 ```bash
 cd YourGame
 ```
-### 1.3 Pornește serverul
+### 1.3 Start the server
 ```bash
 docker-compose up --build
 ```
-Serverul va fi accesibil la: [http://localhost:7106/swagger/index.html](http://localhost:7106/swagger/index.html)
+The server will be accessible at: [http://localhost:7106/swagger/index.html](http://localhost:7106/swagger/index.html)
 
-## 2.a Pornirea Jocului (cu Unity)
-1. Deschide **Unity Hub**.
-2. Apasă **Add Project** și selectează folderul `ProiectIS2`.
-3. Deschide scena principală (ex: `LoginScene`).
-4. Asigură-te că serverul (Docker) rulează.
-5. Apasă **Play**.
+## 2.a Starting the Game (with Unity)
+1. Open **Unity Hub**.
+2. Click **Add Project** and select the `ProiectIS2` folder.
+3. Open the main scene (e.g., `LoginScene`).
+4. Ensure the server (Docker) is running.
+5. Press **Play**.
 
-## 2.b Pornirea Jocului (fără Unity) - recomandată
-1. Mergi în folderul rădăcinp.
-2. Apoi ProiectIS2->BuildProfiles->ProiectIS2.
+## 2.b Starting the Game (without Unity) - Recommended
+1. Go to the root folder.
+2. Then go to `ProiectIS2` -> `BuildProfiles` -> `ProiectIS2`.
 
-## Structura API
+## API Structure
 
-Backend-ul expune următoarele rute principale:
+The backend exposes the following main routes:
 
 ### User Management
-* `GET /api/User/{email}` - Returnează profilul jucătorului și garajul acestuia.
-* `POST /api/User` - Înregistrează un jucător nou.
-* `PUT /api/User/add-money` - Actualizează balanța financiară.
+* `GET /api/User/{email}` - Returns the player's profile and their garage.
+* `POST /api/User` - Registers a new player.
+* `PUT /api/User/add-money` - Updates the financial balance.
 
 ### Car Management
-* `GET /api/Car` - Returnează catalogul de mașini.
-* `POST /api/Car/buy/{userId}` - Procesează tranzacția de cumpărare a unei mașini.
+* `GET /api/Car` - Returns the car catalog.
+* `POST /api/Car/buy/{userId}` - Processes the transaction for purchasing a car.
 
-## Echipa de Dezvoltare
+## Development Team
 
-Proiect realizat în cadrul cursului de Inginerie Software de către:
+Project created for the Software Engineering course by:
 
 * [**Mocanu Andrei Ionuț**](https://www.linkedin.com/in/ionu%C8%9B-andrei-mocanu-785bb1258/)
+
 * [**Stanciu Eric Andrei**](https://www.linkedin.com/in/eric-stanciu-5a7497259/)
+
 * [**Durnea Theodora**](https://www.linkedin.com/in/theodora-durnea-122383140/)
 
 ---
-© 2026 Your Game. Toate drepturile rezervate.
+© 2026 Your Game. All rights reserved.
