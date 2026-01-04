@@ -41,10 +41,9 @@ Logica jocului (Client) este separată de logica de business și persistența da
 
 ### Prezentare Video
 *(Adaugă aici link-ul către videoclipul de pe YouTube, ex: [Vizualizează Demo](https://youtube.com/...))*
-<video width="320" height="240" controls>
-  <source src="https://github.com/IonutMocanu/YourGame/blob/main/Readmephoto/Joc.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+
+https://github.com/IonutMocanu/YourGame/blob/main/Readmephoto/Joc.mp4
+
 
 ### Galerie
 
