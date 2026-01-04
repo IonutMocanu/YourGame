@@ -98,9 +98,9 @@ Backend-ul expune următoarele rute principale:
 
 Proiect realizat în cadrul cursului de Inginerie Software de către:
 
-* **Mocanu Andrei Ionuț**(https://www.linkedin.com/in/ionu%C8%9B-andrei-mocanu-785bb1258/)
-* **Stanciu Eric Andrei**(https://www.linkedin.com/in/eric-stanciu-5a7497259/)
-* **Durnea Theodora**(https://www.linkedin.com/in/theodora-durnea-122383140/)
+* [**Mocanu Andrei Ionuț**](https://www.linkedin.com/in/ionu%C8%9B-andrei-mocanu-785bb1258/)
+* [**Stanciu Eric Andrei**](https://www.linkedin.com/in/eric-stanciu-5a7497259/)
+* [**Durnea Theodora**](https://www.linkedin.com/in/theodora-durnea-122383140/)
 
 ---
 © 2026 Your Game. Toate drepturile rezervate.
