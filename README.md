@@ -43,6 +43,8 @@ Logica jocului (Client) este separată de logica de business și persistența da
 
 https://github.com/user-attachments/assets/aa0bc856-095d-4ab3-99c4-52ba8d8851cd
 
+https://github.com/user-attachments/assets/26e41d23-42d5-4c94-8c46-68dbef493d33
+
 ### Galerie
 
 
@@ -77,7 +79,7 @@ Serverul va fi accesibil la: [http://localhost:7106/swagger/index.html](http://l
 2. Apasă **Add Project** și selectează folderul `ProiectIS2`.
 3. Deschide scena principală (ex: `LoginScene`).
 4. Asigură-te că serverul (Docker) rulează.
-5. Apasă **Play** ▶️.
+5. Apasă **Play**.
 
 ## 2.b Pornirea Jocului (fără Unity) - recomandată
 1. Mergi în folderul rădăcinp.
