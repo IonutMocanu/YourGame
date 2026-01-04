@@ -1,0 +1,10 @@
+**/.dockerignore
+**/.env
+**/bin
+**/obj
+**/.vs
+**/.vscode
+**/.git
+
+ProiectIS2/
+ProiectIS2.meta

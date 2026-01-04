@@ -6,6 +6,8 @@ TagManager:
   tags:
   - money
   - name
+  - carmanager
+  - buybutton
   layers:
   - Default
   - TransparentFX

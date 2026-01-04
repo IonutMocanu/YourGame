@@ -1,8 +1,11 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UISceneManager : MonoBehaviour
 {
-    GameManager gameManager;
+
+
+    private GameManager gameManager;
 
     private void Awake()
     {
@@ -16,17 +19,18 @@ public class UISceneManager : MonoBehaviour
             Debug.Log("Nu avem utilizator");
             return null;
         }
+        gameManager.GetUser(gameManager.CurrentUser.Email);
         return gameManager.CurrentUser.Money.ToString();
     }
 
-    public void ShowMoney()
+    public void ShowMoney(int? money)
     {
         if(GetMoney() is null)
         {
             return;
         }
         string defaultMoney = "Money: ";
-        gameManager.moneyText.text = defaultMoney + GetMoney();
+        gameManager.moneyText.text = defaultMoney + money.ToString();
     }
 
     private string GetPlayerName()

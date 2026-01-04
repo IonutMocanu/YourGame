@@ -2,11 +2,14 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ScManager : MonoBehaviour
 {
-    UISceneManager uISceneManager;
-    GameManager gameManager;
+    //public Button buyButton;
+    private UISceneManager uISceneManager;
+    private GameManager gameManager;
+    //private CarManager _carManager;
     //private void Start()
     //{
     //    if (SceneManager.GetActiveScene().buildIndex == 1)
@@ -37,16 +40,25 @@ public class ScManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
+            //_carManager = GameObject.FindGameObjectWithTag("carmanager").GetComponent<CarManager>();
+
+
+
             //Debug.Log("Salut");
             gameManager.moneyText = GameObject.FindGameObjectWithTag("money").GetComponent<TMPro.TextMeshProUGUI>();
-            uISceneManager.ShowMoney();
-            Debug.Log(gameManager.moneyText.text);
+            uISceneManager.ShowMoney(gameManager.CurrentUser.Money);
+            //Debug.Log(gameManager.moneyText.text);
 
             gameManager.nameText = GameObject.FindGameObjectWithTag("name").GetComponent<TMPro.TextMeshProUGUI>();
             uISceneManager.ShownName();
-            Debug.Log(gameManager.moneyText.text);
+            //Debug.Log(gameManager.moneyText.text);
         }
     }
+
+    //private void Update()
+    //{
+
+    //}
 
     public void ApplicationQuit()
     {

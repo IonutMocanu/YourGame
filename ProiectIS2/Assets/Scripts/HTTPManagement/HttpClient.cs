@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.Networking;
 using Newtonsoft.Json;
 
-//asta e direct luat de pe youtube
 namespace _Scripts
 {
     public static class HttpClient
@@ -26,7 +25,6 @@ namespace _Scripts
             while (!postRequest.isDone) await Task.Delay(10);
 
             string responseText = postRequest.downloadHandler.text;
-
             Debug.Log($"[Server Response]: {responseText}");
 
             if (postRequest.result != UnityWebRequest.Result.Success)
@@ -41,9 +39,25 @@ namespace _Scripts
             }
             catch (System.Exception ex)
             {
-                Debug.LogError($"Nu am putut citi JSON-ul! Serverul a trimis: '{responseText}'. Eroare: {ex.Message}");
+                Debug.LogError($"Error parsing JSON: {ex.Message}");
                 return default;
             }
+        }
+
+        public static async Task<T> Put<T>(string endpoint, object payload)
+        {
+            var putRequest = CreateRequest(endpoint, RequestType.PUT, payload);
+            await putRequest.SendWebRequest();
+
+            while (!putRequest.isDone) await Task.Delay(10);
+
+            if (putRequest.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError($"Error PUT: {putRequest.error} | Response: {putRequest.downloadHandler.text}");
+                return default;
+            }
+
+            return JsonConvert.DeserializeObject<T>(putRequest.downloadHandler.text);
         }
 
         public static async Task<T> Delete<T>(string endpoint)

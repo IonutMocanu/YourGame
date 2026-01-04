@@ -7,6 +7,7 @@ using APINet.Database;
 using APINet.Shared.Database.Models;
 using APINet.Services.Abstractions;
 using APINet.Services.Implementations;
+// using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,6 +37,24 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ICarService, CarService>();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        // Asigură-te că folosești numele corect al DbContext-ului tău
+        var context = services.GetRequiredService<APINet.Database.GameDatabaseContext>();
+        
+        // Asta aplică toate migrările care lipsesc (creează tabelele)
+        context.Database.Migrate();
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Eroare la migrare: {ex.Message}");
+    }
+}
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

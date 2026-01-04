@@ -1,0 +1,15 @@
+services:
+  game-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: game_backend_container
+    ports:
+      - "7106:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      # MODIFICARE 1: Spunem bazei de date să se creeze în folderul 'data'
+      - ConnectionStrings__DefaultConnection=Data Source=data/Game.db
+    volumes:
+      # MODIFICARE 2: Montăm volumul într-un sub-folder '/app/data', nu peste '/app'
+      - ./db_data:/app/data

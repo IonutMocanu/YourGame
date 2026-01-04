@@ -37,7 +37,7 @@ public class CarController : ControllerBase
         try 
         {
             await _carService.BuyCar(userId, car);
-            return Ok("Ai cumpărat mașina cu succes!");
+            return Ok(car);
         }
         catch (Exception ex)
         {

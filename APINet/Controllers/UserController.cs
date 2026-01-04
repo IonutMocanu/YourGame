@@ -62,7 +62,7 @@ public class UserController : ControllerBase
         try
         {
             await _userService.AddMoney(user);
-            return Ok("Jucător actualizat.");
+            return Ok(user);
         }
         catch (Exception ex)
         {
