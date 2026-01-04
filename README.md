@@ -60,7 +60,7 @@ We configured **Docker Compose** to eliminate the need for manually installing d
 
 ### 1.1 Clone the repository
 ```bash
-git clone [https://github.com/IonutMocanu/YourGame.git](https://github.com/IonutMocanu/YourGame.git)
+git clone https://github.com/IonutMocanu/YourGame.git
 ```
 ### 1.2 Navigate to the root folder (where docker-compose.yml is located)
 ```bash
