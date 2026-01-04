@@ -1,4 +1,4 @@
-# City Car Dealership & Simulator
+# Your Game
 
 > Un simulator 3D interactiv dezvoltat în **Unity**, conectat la un backend robust **ASP.NET Core**, care permite utilizatorilor să gestioneze un cont virtual, să achiziționeze mașini și să le vizualizeze într-un garaj personalizat.
 
@@ -57,17 +57,17 @@ Proiectul este gândit să ruleze modular. Urmează pașii de mai jos:
 Am configurat **Docker Compose** pentru a elimina nevoia de a instala baze de date sau SDK-uri complexe manual.
 
 # 1. Clonează repository-ul
-'''bash
+```bash
 git clone [https://github.com/numele-tau/CityCarSimulator.git](https://github.com/numele-tau/CityCarSimulator.git)
-'''
+```
 # 2. Navighează în folderul rădăcină (unde este docker-compose.yml)
-'''bash
+```bash
 cd YourGame
-'''
+```
 # 3. Pornește serverul
-'''bash
+```bash
 docker-compose up --build
-'''
+```
 Serverul va fi accesibil la: [http://localhost:7106/swagger](http://localhost:7106/swagger)
 
 ### 2.1 Pornirea Jocului (cu Unity)
@@ -103,4 +103,4 @@ Proiect realizat în cadrul cursului de Inginerie Software de către:
 * **Durnea Theodora**
 
 ---
-© 2026 City Car Simulator. Toate drepturile rezervate.
+© 2026 Your Game. Toate drepturile rezervate.
