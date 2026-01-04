@@ -48,7 +48,7 @@ Logica jocului (Client) este separată de logica de business și persistența da
 
 | Login Menu | Garage System | Swagger API |
 |:---:|:---:|:---:|
-| ![Menu]<img src="https://github.com/IonutMocanu/YourGame/blob/main/Readmephoto/MENU.jpeg" alt="isolated" width="200"/> | ![Garage](Screenshots/garage.png) | ![Swagger](Screenshots/swagger.png) |
+| <img src="https://github.com/IonutMocanu/YourGame/blob/main/Readmephoto/MENU.jpeg" alt="isolated" width="600"/> | <img src="https://github.com/IonutMocanu/YourGame/blob/main/Readmephoto/MENU.jpeg" alt="isolated" width="600"/> |<img src="https://github.com/IonutMocanu/YourGame/blob/main/Readmephoto/MENU.jpeg" alt="isolated" width="600"/> |
 
 *(Notă: Asigură-te că urci pozele în folderul proiectului și actualizezi calea de mai sus)*
 
