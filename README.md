@@ -45,7 +45,7 @@ Logica jocului (Client) este separată de logica de business și persistența da
 ### Galerie
 | Login Menu | Garage System | Swagger API |
 |:---:|:---:|:---:|
-| ![Login](Screenshots/login.png) | ![Garage](Screenshots/garage.png) | ![Swagger](Screenshots/swagger.png) |
+| ![Login](Readmephoto/MENU.jpeg) | ![Garage](Screenshots/garage.png) | ![Swagger](Screenshots/swagger.png) |
 
 *(Notă: Asigură-te că urci pozele în folderul proiectului și actualizezi calea de mai sus)*
 
