@@ -2,7 +2,7 @@
 
 > Un simulator 3D interactiv dezvoltat în **Unity**, conectat la un backend robust **ASP.NET Core**, care permite utilizatorilor să gestioneze un cont virtual, să achiziționeze mașini și să le vizualizeze într-un garaj personalizat.
 
-![Unity](https://img.shields.io/badge/Client-Unity_2022-black?logo=unity)
+![Unity](https://img.shields.io/badge/Client-Unity_2025-black?logo=unity)
 ![.NET](https://img.shields.io/badge/Backend-.NET_8-purple?logo=dotnet)
 ![Docker](https://img.shields.io/badge/Deploy-Docker-blue?logo=docker)
 ![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?logo=sqlite)
