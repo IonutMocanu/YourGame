@@ -44,11 +44,10 @@ Logica jocului (Client) este separată de logica de business și persistența da
 
 ### Galerie
 
-<img src=""D:\YourGame\Readmephoto\MENU.jpeg"" alt="isolated" width="200"/>
 
 | Login Menu | Garage System | Swagger API |
 |:---:|:---:|:---:|
-| <img src="https://github.com/IonutMocanu/YourGame/blob/main/Readmephoto/MENU.jpeg" alt="isolated" width="600"/> | <img src="https://github.com/IonutMocanu/YourGame/blob/main/Readmephoto/MENU.jpeg" alt="isolated" width="600"/> |<img src="https://github.com/IonutMocanu/YourGame/blob/main/Readmephoto/MENU.jpeg" alt="isolated" width="600"/> |
+| <img src="https://github.com/IonutMocanu/YourGame/blob/main/Readmephoto/MENU.jpeg" alt="isolated" width="600"/> | <img src="https://github.com/IonutMocanu/YourGame/blob/main/Readmephoto/GARAGE.jpeg" alt="isolated" width="600"/> |<img src="https://github.com/IonutMocanu/YourGame/blob/main/Readmephoto/MENU.jpeg" alt="isolated" width="600"/> |
 
 *(Notă: Asigură-te că urci pozele în folderul proiectului și actualizezi calea de mai sus)*
 
