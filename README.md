@@ -42,7 +42,8 @@ Logica jocului (Client) este separată de logica de business și persistența da
 ### Prezentare Video
 *(Adaugă aici link-ul către videoclipul de pe YouTube, ex: [Vizualizează Demo](https://youtube.com/...))*
 
-https://youtu.be/ceOMBv3CtS0
+[![](https://markdown-videos-api.jorgenkh.no/youtu.be/ceOMBv3CtS0)](https://youtu.be/ceOMBv3CtS0)
+
 
 ### Galerie
 
