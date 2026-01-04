@@ -61,7 +61,40 @@ Am configurat **Docker Compose** pentru a elimina nevoia de a instala baze de da
 git clone [https://github.com/numele-tau/CityCarSimulator.git](https://github.com/numele-tau/CityCarSimulator.git)
 
 # 2. Navighează în folderul rădăcină (unde este docker-compose.yml)
-cd CityCarSimulator
+cd YourGame
 
 # 3. Pornește serverul
 docker-compose up --build
+
+Serverul va fi accesibil la: [http://localhost:7106/swagger](http://localhost:7106/swagger)
+
+### 2. Pornirea Jocului (cu Unity)
+1. Deschide **Unity Hub**.
+2. Apasă **Add Project** și selectează folderul `ProiectIS2`.
+3. Deschide scena principală (ex: `LoginScene`).
+4. Asigură-te că serverul (Docker) rulează.
+5. Apasă **Play** ▶️.
+
+## 🔌 Structura API
+
+Backend-ul expune următoarele rute principale:
+
+### User Management
+* `GET /api/User/{email}` - Returnează profilul jucătorului și garajul acestuia.
+* `POST /api/User` - Înregistrează un jucător nou.
+* `PUT /api/User/add-money` - Actualizează balanța financiară.
+
+### Car Management
+* `GET /api/Car` - Returnează catalogul de mașini.
+* `POST /api/Car/buy/{userId}` - Procesează tranzacția de cumpărare a unei mașini.
+
+## 👥 Echipa de Dezvoltare
+
+Proiect realizat în cadrul cursului de Inginerie Software de către:
+
+* **Mocanu Andrei Ionuț**
+* **Stanciu Eric Andrei**
+* **Durnea Theodora**
+
+---
+© 2026 City Car Simulator. Toate drepturile rezervate.
