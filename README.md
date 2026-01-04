@@ -58,7 +58,7 @@ Am configurat **Docker Compose** pentru a elimina nevoia de a instala baze de da
 
 # 1. Clonează repository-ul
 ```bash
-git clone [https://github.com/numele-tau/CityCarSimulator.git](https://github.com/numele-tau/CityCarSimulator.git)
+git clone https://github.com/IonutMocanu/YourGame.git
 ```
 # 2. Navighează în folderul rădăcină (unde este docker-compose.yml)
 ```bash
