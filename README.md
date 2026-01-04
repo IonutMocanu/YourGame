@@ -49,7 +49,6 @@ Logica jocului (Client) este separată de logica de business și persistența da
 |:---:|:---:|:---:|
 | <img src="https://github.com/IonutMocanu/YourGame/blob/main/Readmephoto/MENU.jpeg" alt="isolated" width="1600"/> | <img src="https://github.com/IonutMocanu/YourGame/blob/main/Readmephoto/GARAGE.jpeg" alt="isolated" width="1600"/> |<img src="https://github.com/IonutMocanu/YourGame/blob/main/Readmephoto/API.jpeg" alt="isolated" width="1600"/> |
 
-*(Notă: Asigură-te că urci pozele în folderul proiectului și actualizezi calea de mai sus)*
 
 ## Instalare și Rulare
 
