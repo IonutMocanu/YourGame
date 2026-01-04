@@ -53,18 +53,18 @@ Logica jocului (Client) este separată de logica de business și persistența da
 
 Proiectul este gândit să ruleze modular. Urmează pașii de mai jos:
 
-##1. Pornirea Serverului (Backend)
+## 1. Pornirea Serverului (Backend)
 Am configurat **Docker Compose** pentru a elimina nevoia de a instala baze de date sau SDK-uri complexe manual.
 
-### 1. Clonează repository-ul
+### 1.1 Clonează repository-ul
 ```bash
 git clone https://github.com/IonutMocanu/YourGame.git
 ```
-### 2. Navighează în folderul rădăcină (unde este docker-compose.yml)
+### 1.2 Navighează în folderul rădăcină (unde este docker-compose.yml)
 ```bash
 cd YourGame
 ```
-### 3. Pornește serverul
+### 1.3 Pornește serverul
 ```bash
 docker-compose up --build
 ```
