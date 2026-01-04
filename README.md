@@ -68,7 +68,7 @@ cd YourGame
 ```bash
 docker-compose up --build
 ```
-Serverul va fi accesibil la: [http://localhost:7106/swagger](http://localhost:7106/swagger)
+Serverul va fi accesibil la: [http://localhost:7106/swagger/index.html](http://localhost:7106/swagger/index.html)
 
 ### 2.1 Pornirea Jocului (cu Unity)
 1. Deschide **Unity Hub**.
