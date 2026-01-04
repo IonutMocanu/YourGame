@@ -53,31 +53,31 @@ Logica jocului (Client) este separată de logica de business și persistența da
 
 Proiectul este gândit să ruleze modular. Urmează pașii de mai jos:
 
-### 1. Pornirea Serverului (Backend)
+##1. Pornirea Serverului (Backend)
 Am configurat **Docker Compose** pentru a elimina nevoia de a instala baze de date sau SDK-uri complexe manual.
 
-# 1. Clonează repository-ul
+### 1. Clonează repository-ul
 ```bash
 git clone https://github.com/IonutMocanu/YourGame.git
 ```
-# 2. Navighează în folderul rădăcină (unde este docker-compose.yml)
+### 2. Navighează în folderul rădăcină (unde este docker-compose.yml)
 ```bash
 cd YourGame
 ```
-# 3. Pornește serverul
+### 3. Pornește serverul
 ```bash
 docker-compose up --build
 ```
 Serverul va fi accesibil la: [http://localhost:7106/swagger/index.html](http://localhost:7106/swagger/index.html)
 
-### 2.1 Pornirea Jocului (cu Unity)
+## 2.1 Pornirea Jocului (cu Unity)
 1. Deschide **Unity Hub**.
 2. Apasă **Add Project** și selectează folderul `ProiectIS2`.
 3. Deschide scena principală (ex: `LoginScene`).
 4. Asigură-te că serverul (Docker) rulează.
 5. Apasă **Play** ▶️.
 
-### 2.2 Pornirea Jocului (fără Unity)
+## 2.2 Pornirea Jocului (fără Unity)
 1. Mergi în folderul rădăcinp.
 2. Apoi ProiectIS2->BuildProfiles->ProiectIS2.
 
