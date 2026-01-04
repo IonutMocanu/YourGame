@@ -81,7 +81,7 @@ Serverul va fi accesibil la: [http://localhost:7106/swagger/index.html](http://l
 1. Mergi în folderul rădăcinp.
 2. Apoi ProiectIS2->BuildProfiles->ProiectIS2.
 
-## 🔌 Structura API
+## Structura API
 
 Backend-ul expune următoarele rute principale:
 
@@ -94,13 +94,13 @@ Backend-ul expune următoarele rute principale:
 * `GET /api/Car` - Returnează catalogul de mașini.
 * `POST /api/Car/buy/{userId}` - Procesează tranzacția de cumpărare a unei mașini.
 
-## 👥 Echipa de Dezvoltare
+## Echipa de Dezvoltare
 
 Proiect realizat în cadrul cursului de Inginerie Software de către:
 
-* **Mocanu Andrei Ionuț**
-* **Stanciu Eric Andrei**
-* **Durnea Theodora**
+* **Mocanu Andrei Ionuț**(https://www.linkedin.com/in/ionu%C8%9B-andrei-mocanu-785bb1258/)
+* **Stanciu Eric Andrei**(https://www.linkedin.com/in/eric-stanciu-5a7497259/)
+* **Durnea Theodora**(https://www.linkedin.com/in/theodora-durnea-122383140/)
 
 ---
 © 2026 Your Game. Toate drepturile rezervate.
