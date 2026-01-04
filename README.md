@@ -43,6 +43,9 @@ Logica jocului (Client) este separată de logica de business și persistența da
 *(Adaugă aici link-ul către videoclipul de pe YouTube, ex: [Vizualizează Demo](https://youtube.com/...))*
 
 ### Galerie
+
+<img src=""D:\YourGame\Readmephoto\MENU.jpeg"" alt="isolated" width="200"/>
+
 | Login Menu | Garage System | Swagger API |
 |:---:|:---:|:---:|
 | ![Menu]<img src=""D:\YourGame\Readmephoto\MENU.jpeg"" alt="isolated" width="200"/> | ![Garage](Screenshots/garage.png) | ![Swagger](Screenshots/swagger.png) |
