@@ -56,7 +56,6 @@ Proiectul este gândit să ruleze modular. Urmează pașii de mai jos:
 ### 1. Pornirea Serverului (Backend)
 Am configurat **Docker Compose** pentru a elimina nevoia de a instala baze de date sau SDK-uri complexe manual.
 
-```bash
 # 1. Clonează repository-ul
 git clone [https://github.com/numele-tau/CityCarSimulator.git](https://github.com/numele-tau/CityCarSimulator.git)
 
