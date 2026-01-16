@@ -19,7 +19,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private UserAddRecord _record = new UserAddRecord();
 
-    private const string BaseUrl = "http://localhost:7106/api";
+    private const string BaseUrl = "http://127.0.0.1:7106/api";
+    //private const string BaseUrl = "http://localhost:7106/api";
 
     public TMPro.TextMeshProUGUI moneyText;
     public TMPro.TextMeshProUGUI nameText;
