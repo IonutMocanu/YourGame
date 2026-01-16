@@ -8,6 +8,6 @@ public class CarRecord
     public int Year { get; set; }
     public float Speed { get; set; }
     public float Price { get; set; }
-    public string FullName => $"{Manufacturer} {Model} ({Year})";
+    public string FullName => $"{Manufacturer} {Model} ({Year})"; // scop informativ
     public string? OwnerName { get; set; } 
 }
