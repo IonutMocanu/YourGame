@@ -11,8 +11,6 @@ using APINet.Services.Implementations;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers().AddNewtonsoftJson(o => {
     o.SerializerSettings.ContractResolver = new DefaultContractResolver();
 });
@@ -43,10 +41,9 @@ using (var scope = app.Services.CreateScope())
     var services = scope.ServiceProvider;
     try
     {
-        // Asigură-te că folosești numele corect al DbContext-ului tău
         var context = services.GetRequiredService<APINet.Database.GameDatabaseContext>();
         
-        // Asta aplică toate migrările care lipsesc (creează tabelele)
+        // migrari
         context.Database.Migrate();
     }
     catch (Exception ex)

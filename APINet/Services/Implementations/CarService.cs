@@ -12,7 +12,6 @@ public class CarService(GameDatabaseContext context) : ICarService
     {
         var query = context.Cars.AsQueryable();
 
-        // 1. Filtrare (Căutare)
         if (!string.IsNullOrWhiteSpace(queryParams.Search))
         {
             var search = queryParams.Search.Trim().ToLower();
@@ -21,12 +20,10 @@ public class CarService(GameDatabaseContext context) : ICarService
                 c.Model.ToLower().Contains(search));
         }
 
-        // 2. Numărare totală
         var totalCount = await query.CountAsync();
 
-        // 3. Paginare și Proiecție (Mapping)
         var data = await query
-            .Include(c => c.User) // Aducem și proprietarul
+            .Include(c => c.User) 
             .OrderBy(c => c.Manufacturer)
             .Skip((queryParams.Page - 1) * queryParams.PageSize)
             .Take(queryParams.PageSize)
@@ -71,13 +68,12 @@ public class CarService(GameDatabaseContext context) : ICarService
 
     public async Task BuyCar(int userId, CarAddRecord carDto)
     {
-        // Verificăm dacă userul există
         var userExists = await context.Users.AnyAsync(u => u.Id == userId);
         if (!userExists) throw new Exception("Userul nu există!");
 
         var entity = new Car
         {
-            UserId = userId, // Legăm mașina de user
+            UserId = userId, 
             Manufacturer = carDto.Manufacturer,
             Model = carDto.Model,
             Year = carDto.Year,

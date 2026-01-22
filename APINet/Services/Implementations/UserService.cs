@@ -80,7 +80,6 @@ public async Task<PagedResponse<UserRecord>> GetUsers(SearchPaginationQueryParam
         Email = userEntity.Email,
         Money = userEntity.Money,
         
-        // Mapăm lista de mașini manual
         Garage = userEntity.Cars.Select(c => new CarRecord
         {
             Id = c.Id,
